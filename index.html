@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>COOKIE-CLIKER</title>
+    
+</head>
+<body>
+     <!--MODAL-->
+     <div id="welcome" class="modal">
+        <div class="modal-content">
+            <p>Welcome to our Cookie Clicker!</p>
+            <button id="play" class="play">PLAY</button>
+        </div>
+    </div>
+
+    <!--HEADER-->
+    <header>
+        <h1>Cookie Clicker</h1>
+    </header>
+
+
+    <main>
+    <!--COUNTER AND SCORE-->
+        <section id="sec-counter-score">
+            <article id="counter">
+                <p id="counter-lbl-title">Counter:</p>
+                <p id="counter-lbl">0</p> <!--that will change on JS-->
+            </article>
+
+            <article id="score">
+                <p id="score-lbl-title">Score:</p>
+                <p id="score-lbl">0 points</p> <!--that will change on JS-->
+            </article>
+        </section>
+
+    <!--COOKIE-->  
+        <section id="sec-cookie">
+            <article id="cookie">
+                <!--floating cookies-->
+                <section id="floating-cookies">
+                    <img class="float-cookie float-cookie-1" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-2" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-3" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-4" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-5" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-6" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-7" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-8" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-9" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-10" alt="cookie-float" src="img/floatingcookie.png">
+                    <img class="float-cookie float-cookie-11" alt="cookie-float" src="img/floatingcookie.png">
+                </section>
+
+                <!--cookie-->
+                <button id="cookie-btn">
+                    <img id="cookie-img" alt="cookie" src="img/cookie.jpg" usemap="#map-name">
+
+                    <map id="map" name="map-name">
+                        <area coords="223,251,187"  shape="circle">
+                    </map>                    
+                </button>
+    
+            </article>   
+        </section>
+
+    
+
+
+    <!--BUTTONS-->
+    <section id="sec-buttons">
+
+        <article id="multiplier">
+            <button class="thebtns" id="multiplier-btn">
+                <section class="p-container">
+                    <p class="btn-title" id="mult-btn-title">MULTIPLIER</p>
+                
+                </section>
+            </button>
+        </article>
+        
+        <article id="grandma">
+            <button class="thebtns" id="grandma-btn">
+                <section class="p-container">
+                    <p class="btn-title" id="autoclick-btn-title">GRANDMA</p>
+                  
+                </section>
+            </button>
+        </article>
+
+        <article id="bonus">
+            <button class="thebtns" id="bonus-btn">
+                <section class="p-container">
+                    <p class="btn-title" id="bonus-btn-title">BONUS</p>
+                 
+                </section>
+            </button>
+        </article>
+    </section>
+</main>
+
+
+
+    
+</body>
+</html>

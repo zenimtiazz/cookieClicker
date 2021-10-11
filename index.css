@@ -1,0 +1,314 @@
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+    border-radius: 5px;
+  }
+  /* Modal Content */
+  
+  .modal-content {
+    background-color: #063157;
+    /* background-color: blueviolet; */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid white;
+    width: 80%;
+    font-size: 2em;
+  }
+  
+  /* The Play Button */
+  .play {
+    color: white;
+    background: #d6893f;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  .play:hover, .play:focus {
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* ---------------- GENERAL STYLE ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: aqua;
+    /* background: linear-gradient(-45deg, rgb(16, 75, 131), rgb(2, 45, 82), rgb(71, 119, 163), rgb(19, 58, 95)); */
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+main {
+display: grid;
+align-items: center;
+gap: 0px;
+}
+
+article, header {
+padding: 5px;
+text-align: center;
+}
+
+button {
+outline: none;
+}
+
+
+/* -------------------- HEADER -------------------- */
+header {
+padding: 20px;
+}
+
+h1 {
+font-size: 3em;
+font-family: 'Ranchers', cursive;
+text-shadow: 2px 2px 2px black;
+}
+
+/* --------------- COUNTER AND SCORE --------------- */
+#sec-counter-score {
+height: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr; 
+align-items: flex-start;
+background: #d6893f;
+border-top: 2px solid rgb(240, 236, 236);
+border-bottom: 2px solid rgb(229, 226, 226)
+}
+
+#counter, #score { 
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+#score {
+border-left: 1px dotted white;
+}
+
+#counter-lbl-title, #score-lbl-title {
+font-size: 20px;
+display: grid;
+color: #4f221a; 
+}
+
+#counter-lbl, #score-lbl {
+font-size: 2em;
+font-weight: bold;
+color: #4f221a; 
+}
+
+
+/* --------------------- COOKIE --------------------- */
+
+#cookie, #cookie-btn {
+border: none;
+background: transparent;
+overflow: hidden;
+}
+
+#cookie-img {
+width: 100%;
+height: 400px;
+margin: 10px;
+z-index: 1;
+text-align:left;
+}
+
+map {
+cursor: pointer;
+}
+
+
+/* floating cookies */
+#floating-cookies {
+visibility: visible;
+position: relative;
+height: 65%;
+}
+
+.float-cookie {
+visibility: visible;
+position: absolute;
+width: 5%;
+animation: fall 5s linear infinite;
+}
+
+.float-cookie-1 {
+top: 200px;
+left: 5%;
+animation-delay: 2s;
+}
+
+.float-cookie-2 {
+top: 100px;
+right: 3%;
+}
+
+.float-cookie-3 {
+top: 70px;
+left: 20%;
+animation-delay: 4s;
+}
+
+.float-cookie-4 {
+top: 200px;
+right: 5%;
+animation-delay: 1s;
+}
+
+.float-cookie-5 {
+top: 400px;
+left: 12%;
+animation-delay: 3s;
+}
+
+.float-cookie-6 {
+top: 300px;
+right: 10px;
+animation-delay: 2s;
+}
+
+.float-cookie-7 {
+top: 25px;
+left: 10%;
+animation-delay: 4s;
+}
+
+.float-cookie-8 {
+top: 40px;
+right: 16%;
+animation-delay: 3s;
+}
+
+.float-cookie-9 {
+top: 300px;
+left: 15%;
+animation-delay: 4s;
+}
+
+.float-cookie-10 {
+top: 350px;
+right: 13%;
+animation-delay: 1s;
+}
+
+.float-cookie-11 {
+top: 410px;
+right: 5%;
+animation-delay: 3s;  
+}
+
+
+@keyframes fall{
+0% {
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-10px) rotate(30deg);
+    transform: translateX(-5%) rotate(0deg);
+}
+40% {
+    opacity: 0.9;
+    transform: translateY(40px) rotate(20deg);
+    transform: translateX(-10%) rotate(90deg);
+}
+100% {
+    opacity: 1;
+    transform: translateY(-10px) rotate(30deg);
+    transform: translateX(-5%) rotate(225deg);
+}
+}
+/* buttons */
+
+#sec-buttons { 
+    height: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+    "multiplier multiplier"
+    "grandma grandma"
+    "bonus bonus" 
+
+}
+
+.thebtns {
+    background-color: rgb(169, 171, 172);
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    width: 50%;
+    height: 70px;
+    box-shadow: inset -4px -4px 5px  rgb(3, 16, 27);
+    cursor: pointer;
+
+}
+
+.thebtns:hover {
+    box-shadow: inset -10px -10px 20px  rgb(3, 16, 27);
+}
+
+
+.btn-title {
+    font-size: 30px;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.p-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+#grandma {
+    grid-area: grandma;
+}
+
+
+#multiplier {
+    grid-area: multiplier;
+   
+}
+
+
+#bonus {
+    grid-area: bonus;
+}
+
